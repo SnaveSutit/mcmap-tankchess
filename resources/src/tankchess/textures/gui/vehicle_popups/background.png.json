@@ -1,0 +1,26 @@
+{
+	"splits": [
+		{
+			"start": {
+				"x": 0,
+				"y": 0
+			},
+			"end": {
+				"x": 160,
+				"y": 72
+			},
+			"path": "./background_a.png"
+		},
+		{
+			"start": {
+				"x": 161,
+				"y": 0
+			},
+			"end": {
+				"x": 320,
+				"y": 72
+			},
+			"path": "./background_b.png"
+		}
+	]
+}

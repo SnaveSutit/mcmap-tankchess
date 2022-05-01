@@ -47,37 +47,39 @@ class Font {
 	}
 }
 
-new Font('vehicle_icons')
-	.newChar('icon.command', 'tankchess:font/vehicle_icons/command.png', 31, 31)
-	.newChar('icon.lv', 'tankchess:font/vehicle_icons/lv.png', 31, 31)
-	.newChar('icon.mv', 'tankchess:font/vehicle_icons/mv.png', 31, 31)
-	.newChar('icon.hv', 'tankchess:font/vehicle_icons/hv.png', 31, 31)
-	.newChar('icon.vd', 'tankchess:font/vehicle_icons/vd.png', 31, 31)
-	.newChar('icon.hm', 'tankchess:font/vehicle_icons/hm.png', 31, 31)
+function instantiate() {
+	new Font('vehicle_icons')
+		.newChar('icon.command', 'tankchess:font/vehicle_icons/command.png', 31, 31)
+		.newChar('icon.lv', 'tankchess:font/vehicle_icons/lv.png', 31, 31)
+		.newChar('icon.mv', 'tankchess:font/vehicle_icons/mv.png', 31, 31)
+		.newChar('icon.hv', 'tankchess:font/vehicle_icons/hv.png', 31, 31)
+		.newChar('icon.vd', 'tankchess:font/vehicle_icons/vd.png', 31, 31)
+		.newChar('icon.hm', 'tankchess:font/vehicle_icons/hm.png', 31, 31)
 
-	.newChar('icon.command', 'tankchess:font/vehicle_icons/command_small.png', 0, 7)
-	.newChar('icon.lv_s', 'tankchess:font/vehicle_icons/lv_small.png', 0, 7)
-	.newChar('icon.mv_s', 'tankchess:font/vehicle_icons/mv_small.png', 0, 7)
-	.newChar('icon.hv_s', 'tankchess:font/vehicle_icons/hv_small.png', 0, 7)
-	.newChar('icon.vd_s', 'tankchess:font/vehicle_icons/vd_small.png', 0, 7)
-	.newChar('icon.hm_s', 'tankchess:font/vehicle_icons/hm_small.png', 0, 7)
+		.newChar('icon.command', 'tankchess:font/vehicle_icons/command_small.png', 0, 7)
+		.newChar('icon.lv_s', 'tankchess:font/vehicle_icons/lv_small.png', 0, 7)
+		.newChar('icon.mv_s', 'tankchess:font/vehicle_icons/mv_small.png', 0, 7)
+		.newChar('icon.hv_s', 'tankchess:font/vehicle_icons/hv_small.png', 0, 7)
+		.newChar('icon.vd_s', 'tankchess:font/vehicle_icons/vd_small.png', 0, 7)
+		.newChar('icon.hm_s', 'tankchess:font/vehicle_icons/hm_small.png', 0, 7)
 
-new Font('nametags')
-	.newChar('background', 'tankchess:font/nametag_background.png', 0, 16)
+	new Font('nametags')
+		.newChar('background', 'tankchess:font/nametag_background.png', 0, 16)
 
-	.newChar('icon.commander', 'tankchess:font/vehicle_icons/command_nametag.png', 0, 16)
-	.newChar('1', 'tankchess:font/vehicle_icons/lv_nametag.png', 0, 16)
-	.newChar('2', 'tankchess:font/vehicle_icons/mv_nametag.png', 0, 16)
-	.newChar('3', 'tankchess:font/vehicle_icons/hv_nametag.png', 0, 16)
-	.newChar('4', 'tankchess:font/vehicle_icons/vd_nametag.png', 0, 16)
-	.newChar('5', 'tankchess:font/vehicle_icons/hm_nametag.png', 0, 16)
+		.newChar('icon.commander', 'tankchess:font/vehicle_icons/command_nametag.png', 0, 16)
+		.newChar('1', 'tankchess:font/vehicle_icons/lv_nametag.png', 0, 16)
+		.newChar('2', 'tankchess:font/vehicle_icons/mv_nametag.png', 0, 16)
+		.newChar('3', 'tankchess:font/vehicle_icons/hv_nametag.png', 0, 16)
+		.newChar('4', 'tankchess:font/vehicle_icons/vd_nametag.png', 0, 16)
+		.newChar('5', 'tankchess:font/vehicle_icons/hm_nametag.png', 0, 16)
 
-new Font('player_numbers')
-	.newChar('p', 'tankchess:font/player_numbers/p.png', 0, 16)
-	.newChar('1', 'tankchess:font/player_numbers/1.png', 0, 16)
-	.newChar('2', 'tankchess:font/player_numbers/2.png', 0, 16)
-	.newChar('3', 'tankchess:font/player_numbers/3.png', 0, 16)
-	.newChar('4', 'tankchess:font/player_numbers/4.png', 0, 16)
+	new Font('player_numbers')
+		.newChar('p', 'tankchess:font/player_numbers/p.png', 0, 16)
+		.newChar('1', 'tankchess:font/player_numbers/1.png', 0, 16)
+		.newChar('2', 'tankchess:font/player_numbers/2.png', 0, 16)
+		.newChar('3', 'tankchess:font/player_numbers/3.png', 0, 16)
+		.newChar('4', 'tankchess:font/player_numbers/4.png', 0, 16)
+}
 
 function buildResources() {
 	const lang = JSON.parse(fs.readFileSync(langPath))
@@ -91,6 +93,8 @@ function buildResources() {
 
 	fs.writeFileSync(langPath, JSON.stringify(lang, null, '\t'))
 }
+
+instantiate()
 
 module.exports = {
 	buildResources,

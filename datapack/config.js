@@ -62,7 +62,9 @@ module.exports = ({ build }) => ({
 		generatedDirectory: 'zzz',
 		rootNamespace: null,
 
-		get tc() { return require('./tankchess.js') },
+		get tc() {
+			return require('./tankchess.js')
+		},
 
 		generateMoveTree(vehicle) {
 			const flatTree = []
@@ -77,28 +79,16 @@ module.exports = ({ build }) => ({
 						local: local,
 						lastDir: direction,
 						items: {
-							straight: recurse(
-								depth - 1,
-								local.add({ x: 0, z: 1, r: 0 }),
-								'straight'
-							),
+							straight: recurse(depth - 1, local.add({ x: 0, z: 1, r: 0 }), 'straight'),
 						},
 					}
 
 					if (!(direction === 'right')) {
-						branch.items.left = recurse(
-							depth - 1,
-							local.add({ x: 0, z: 0, r: -45 }),
-							'left'
-						)
+						branch.items.left = recurse(depth - 1, local.add({ x: 0, z: 0, r: -45 }), 'left')
 					}
 
 					if (!(direction === 'left')) {
-						branch.items.right = recurse(
-							depth - 1,
-							local.add({ x: 0, z: 0, r: 45 }),
-							'right'
-						)
+						branch.items.right = recurse(depth - 1, local.add({ x: 0, z: 0, r: 45 }), 'right')
 					}
 
 					flatTree.push(branch)
@@ -115,10 +105,7 @@ module.exports = ({ build }) => ({
 				}
 			}
 
-			const tree = recurse(
-				vehicle.speed + 1,
-				new LocalCoordinate({ x: 0, z: 0, r: 0 }, 'straight')
-			)
+			const tree = recurse(vehicle.speed + 1, new LocalCoordinate({ x: 0, z: 0, r: 0 }, 'straight'))
 			return flatTree
 		},
 	},
