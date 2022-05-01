@@ -1,0 +1,8 @@
+
+macro dev {
+	!IF(config.devCommands) {
+		<%%
+			emit(args.map(v => v.content).join(' '))
+		%%>
+	}
+}

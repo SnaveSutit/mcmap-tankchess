@@ -1,0 +1,4 @@
+
+macro const {
+	scoreboard players set $$0 v $$0
+}

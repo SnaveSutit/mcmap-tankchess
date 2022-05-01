@@ -1,0 +1,5 @@
+blocks air {
+	minecraft:air
+	minecraft:void_air
+	minecraft:cave_air
+}
