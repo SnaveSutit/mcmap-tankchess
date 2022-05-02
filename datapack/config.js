@@ -52,7 +52,7 @@ class LocalCoordinate {
 
 module.exports = ({ build }) => ({
 	global: {
-		onBuildSuccess: () => resources.buildResources(),
+		onBuildSuccess: () => setTimeout(resources.buildResources, 25),
 	},
 	mc: {
 		dev: !process.argv.includes('-prod'),

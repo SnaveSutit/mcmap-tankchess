@@ -1,0 +1,18 @@
+{
+	"splits": [
+		{
+			"x": 0,
+			"y": 0,
+			"w": 160,
+			"h": 256,
+			"path": "./background_a.png"
+		},
+		{
+			"x": 161,
+			"y": 0,
+			"w": 160,
+			"h": 256,
+			"path": "./background_b.png"
+		}
+	]
+}
