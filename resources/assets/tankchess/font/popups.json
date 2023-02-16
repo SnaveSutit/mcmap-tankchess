@@ -1,1 +1,18 @@
-{"providers":[{"file":"tankchess:font/gui/vehicle_popups/background_a.png","ascent":64,"height":128,"type":"bitmap","chars":[""]},{"file":"tankchess:font/gui/vehicle_popups/background_b.png","ascent":64,"height":128,"type":"bitmap","chars":[""]}]}
+{
+	"providers": [
+		{
+			"file": "tankchess:font/gui/vehicle_popups/background_a.png",
+			"ascent": 64,
+			"height": 128,
+			"type": "bitmap",
+			"chars": [""]
+		},
+		{
+			"file": "tankchess:font/gui/vehicle_popups/background_b.png",
+			"ascent": 64,
+			"height": 128,
+			"type": "bitmap",
+			"chars": [""]
+		}
+	]
+}
