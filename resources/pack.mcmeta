@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 8,
-		"description": "world-template"
+		"pack_format": 16,
+		"description": "Tank Chess (tankchess)"
 	}
 }

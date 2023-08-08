@@ -1,0 +1,13 @@
+{
+    "version": "0.5.0",
+    "projects": {
+        "undefined": {
+            "project_name": "lv",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\lv\\tread.json",
+                "assets\\animated_java\\models\\item\\lv\\turret.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        }
+    }
+}

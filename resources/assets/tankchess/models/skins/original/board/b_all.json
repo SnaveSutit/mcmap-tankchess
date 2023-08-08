@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "tankchess:skins/original/board/b_all",
+		"particle": "tankchess:skins/original/board/b_all"
+	}
+}

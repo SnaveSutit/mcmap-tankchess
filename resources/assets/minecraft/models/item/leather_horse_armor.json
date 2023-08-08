@@ -1,28 +1,36 @@
 {
-	"parent": "minecraft:item/generated",
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "minecraft:item/leather_horse_armor"
 	},
 	"overrides": [
 		{
-			"predicate": { "custom_model_data": 1 },
-			"model": "tankchess:skin/origin/vehicles/lv/default"
+			"predicate": {
+				"custom_model_data": 1
+			},
+			"model": "item/animated_java_empty"
 		},
 		{
-			"predicate": { "custom_model_data": 2 },
-			"model": "tankchess:skin/origin/vehicles/mv/default"
+			"predicate": {
+				"custom_model_data": 2
+			},
+			"model": "animated_java:item/lv/tread"
 		},
 		{
-			"predicate": { "custom_model_data": 3 },
-			"model": "tankchess:skin/origin/vehicles/vd/default"
-		},
-		{
-			"predicate": { "custom_model_data": 4 },
-			"model": "tankchess:skin/origin/vehicles/hm/default"
-		},
-		{
-			"predicate": { "custom_model_data": 5 },
-			"model": "tankchess:skin/origin/vehicles/hv/default"
+			"predicate": {
+				"custom_model_data": 3
+			},
+			"model": "animated_java:item/lv/turret"
 		}
-	]
+	],
+	"animated_java": {
+		"rigs": {
+			"lv": {
+				"used_ids": [
+					2,
+					3
+				]
+			}
+		}
+	}
 }
