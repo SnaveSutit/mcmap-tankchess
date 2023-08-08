@@ -1,11 +1,80 @@
 {
     "version": "0.5.0",
     "projects": {
-        "undefined": {
-            "project_name": "lv",
+        "973d3e22-7c02-59cd-e14b-b707b02f3fbd": {
+            "project_name": "original_obstacle_a",
             "file_list": [
-                "assets\\animated_java\\models\\item\\lv\\tread.json",
-                "assets\\animated_java\\models\\item\\lv\\turret.json",
+                "assets\\animated_java\\models\\item\\original_obstacle_a\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "62ecf409-6f76-a6ad-72df-3375707b75ce": {
+            "project_name": "original_obstacle_b",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_b\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "6ecbbd5f-cb69-d679-21b9-9f49e5c7b8ee": {
+            "project_name": "original_obstacle_c",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_c\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "39c342f4-3138-5efe-2284-c04edea79227": {
+            "project_name": "original_obstacle_d",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_d\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "9e5b1d84-2bae-775e-ca21-376714cab5a3": {
+            "project_name": "original_obstacle_d_mirror",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_d_mirror\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "a3c75719-d18a-696d-03a9-6978e0442bd2": {
+            "project_name": "original_obstacle_e",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_e\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "8b993146-8c1c-560a-79f9-e54298fc5360": {
+            "project_name": "original_obstacle_e_mirror",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_e_mirror\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "6d9b2177-a7d5-7ed9-61bf-61d7be627a72": {
+            "project_name": "original_obstacle_f",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_f\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "0536fbe3-0b6e-e806-9ae8-b772d76c8f65": {
+            "project_name": "original_obstacle_g",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_g\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "5eacd57f-f921-fa15-c170-3a101489c307": {
+            "project_name": "original_obstacle_g_mirror",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_g_mirror\\bone.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
+        },
+        "2908f2a9-3527-a69e-5208-068a1062cf9b": {
+            "project_name": "original_obstacle_f_mirror",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_obstacle_f_mirror\\bone.json",
                 "assets\\minecraft\\models\\item\\animated_java_empty.json"
             ]
         }

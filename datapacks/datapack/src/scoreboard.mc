@@ -1,8 +1,9 @@
 import ./const.mcm
 
-function load {
+function init {
 	scoreboard objectives add i dummy
 	scoreboard objectives add v dummy
+	scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 
 	#> Vehicle Variables
 	scoreboard objectives add V.id dummy

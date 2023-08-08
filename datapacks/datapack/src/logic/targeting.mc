@@ -19,7 +19,7 @@ dir generic {
 			# Run logic for targeted vehicles/objects that are in range
 			execute if score .loop v >= .min_distance v run {
 				execute if entity @e[type=area_effect_cloud,tag=vehicle,distance=..0.25,limit=1] run say hehe pewpew
-				# dev particle minecraft:dust 1 0 0 1 ~ ~.1 ~ 0 -10 0 10 0 force
+				dev particle minecraft:dust 1 0 0 0.5 ^ ^.1 ^.25 0 -10 0 10 0 force
 			}
 
 			dev scoreboard players add .targetcount i 1
@@ -28,7 +28,8 @@ dir generic {
 			(
 				execute if score .loop v <= .max_distance v
 				positioned ^ ^ ^1 align xyz positioned ~.5 ~ ~.5
-				if block ~ ~ ~ #blocks:shoot_through
+				if block ~ ~ ~ #blocks:target_through
+				if block ~ ~-1 ~ #blocks:move_on
 				run function $block
 			)
 		}
@@ -56,6 +57,7 @@ dir fixed {
 		function start {
 			scoreboard players set .min_distance v 2
 			scoreboard players set .max_distance v 20
+
 			function logic:targeting/generic/scan/start
 		}
 	}

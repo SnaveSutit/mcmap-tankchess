@@ -1,0 +1,12 @@
+{
+	"json.schemas": [
+		{
+			"url": "./.vscode/tellraw.schema.json",
+			"fileMatch": ["*.tellraw.json"]
+		},
+		{
+			"url": "./.vscode/itemsFile.schema.json",
+			"fileMatch": ["*.items.json"]
+		}
+	]
+}

@@ -1,5 +1,7 @@
 const fs = require('fs')
 const resources = require('./resources')
+const loadTellrawMap = require('./tellraw')
+const loadItemMap = require('./items')
 
 function toRad(deg) {
 	return deg * (Math.PI / 180)
@@ -63,6 +65,14 @@ module.exports = () => ({
 		internalScoreboard: 'i',
 		generatedDirectory: 'zzz',
 		rootNamespace: null,
+
+		get tellrawMap() {
+			return loadTellrawMap()
+		},
+
+		get itemMap() {
+			return loadItemMap()
+		},
 
 		get tc() {
 			return require('./tankchess.js')

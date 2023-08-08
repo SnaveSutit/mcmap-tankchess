@@ -1,0 +1,14 @@
+{
+	"activate": [
+		{ "text": "[", "color": "dark_gray" },
+		{ "text": "Editor", "color": "dark_aqua" },
+		{ "text": "]", "color": "dark_gray" },
+		{ "text": " You are now in edit mode", "color": "gray" }
+	],
+	"deactivate": [
+		{ "text": "[", "color": "dark_gray" },
+		{ "text": "Editor", "color": "dark_aqua" },
+		{ "text": "]", "color": "dark_gray" },
+		{ "text": " You are no longer in edit mode", "color": "gray" }
+	]
+}

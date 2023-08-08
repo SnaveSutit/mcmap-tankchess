@@ -1,0 +1,232 @@
+{
+	"$ref": "#/definitions/JsonTextComponent",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"JsonTextArray": {
+			"anyOf": [
+				{
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				{
+					"items": {
+						"$ref": "#/definitions/JsonTextComponent"
+					},
+					"type": "array"
+				}
+			]
+		},
+		"JsonTextColor": {
+			"anyOf": [
+				{
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				{
+					"enum": [
+						"aqua",
+						"black",
+						"blue",
+						"dark_aqua",
+						"dark_blue",
+						"dark_gray",
+						"dark_green",
+						"dark_purple",
+						"dark_red",
+						"gold",
+						"gray",
+						"green",
+						"light_purple",
+						"red",
+						"white",
+						"yellow"
+					],
+					"type": "string"
+				}
+			]
+		},
+		"JsonTextComponent": {
+			"anyOf": [
+				{
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				{
+					"items": {
+						"$ref": "#/definitions/JsonTextComponent"
+					},
+					"type": "array"
+				},
+				{
+					"$ref": "#/definitions/JsonTextObject"
+				},
+				{
+					"type": "string"
+				}
+			]
+		},
+		"JsonTextObject": {
+			"properties": {
+				"block": {
+					"type": "string"
+				},
+				"bold": {
+					"type": "boolean"
+				},
+				"clickEvent": {
+					"properties": {
+						"action": {
+							"enum": [
+								"change_page",
+								"copy_to_clipboard",
+								"open_file",
+								"open_url",
+								"run_command",
+								"suggest_command"
+							],
+							"type": "string"
+						},
+						"value": {
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"color": {
+					"$ref": "#/definitions/JsonTextColor"
+				},
+				"entity": {
+					"type": "string"
+				},
+				"extra": {
+					"$ref": "#/definitions/JsonTextArray"
+				},
+				"font": {
+					"type": "string"
+				},
+				"hoverEvent": {
+					"$ref": "#/definitions/{action:\"show_text\"|\"show_item\"|\"show_entity\";contents:JsonTextComponent|{type:string;id:string;name?:string;}|{id:string;count?:number;tag?:string;};}"
+				},
+				"insertion": {
+					"type": "string"
+				},
+				"italic": {
+					"type": "boolean"
+				},
+				"keybind": {
+					"type": "string"
+				},
+				"nbt": {
+					"type": "string"
+				},
+				"obfuscated": {
+					"type": "boolean"
+				},
+				"score": {
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"objective": {
+							"type": "string"
+						},
+						"value": {
+							"type": "number"
+						}
+					},
+					"type": "object"
+				},
+				"selector": {
+					"type": "string"
+				},
+				"separator": {
+					"type": "string"
+				},
+				"storage": {
+					"type": "string"
+				},
+				"strikethrough": {
+					"type": "boolean"
+				},
+				"text": {
+					"type": "string"
+				},
+				"tl": {
+					"type": "string"
+				},
+				"underlined": {
+					"type": "boolean"
+				},
+				"with": {
+					"$ref": "#/definitions/JsonTextArray"
+				}
+			},
+			"type": "object"
+		},
+		"{action:\"show_text\"|\"show_item\"|\"show_entity\";contents:JsonTextComponent|{type:string;id:string;name?:string;}|{id:string;count?:number;tag?:string;};}": {
+			"properties": {
+				"action": {
+					"enum": ["show_entity", "show_item", "show_text"],
+					"type": "string"
+				},
+				"contents": {
+					"anyOf": [
+						{
+							"items": {
+								"type": "string"
+							},
+							"type": "array"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/JsonTextComponent"
+							},
+							"type": "array"
+						},
+						{
+							"$ref": "#/definitions/JsonTextObject"
+						},
+						{
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								},
+								"type": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						{
+							"properties": {
+								"count": {
+									"type": "number"
+								},
+								"id": {
+									"type": "string"
+								},
+								"tag": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						{
+							"type": "string"
+						}
+					]
+				}
+			},
+			"type": "object"
+		}
+	}
+}

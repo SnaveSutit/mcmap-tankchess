@@ -21,6 +21,11 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@folder/readdir@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@folder/readdir/-/readdir-3.1.0.tgz#f0c64b5d67669ba6f8374bb8d0dc376f36532b1e"
+  integrity sha512-mqkVdQ77BcCOWur/dxoPxjJS2eJg8Eqqx1Dgdc/qbTeGI5UMPDLmT0peGEjxLdlnD9SvhMnpJuiyaYl2btdT6A==
+
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"

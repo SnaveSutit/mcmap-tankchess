@@ -9,13 +9,25 @@ function apply_size_changes {
 	scoreboard players operation board.z v = board.new.z v
 }
 
-function build {
+function build_main {
+	execute positioned 0 10 0 run {
+		function board:build_local
+	}
+}
+
+function build_editor {
+	execute positioned 1000 10 0 run {
+		function board:build_local
+	}
+}
+
+function build_local {
 	function board:remove_previous
 	# Center board in play area
 	scoreboard players operation #x v = board.x v
 	scoreboard players operation #x v /= 2 v
-	# Center x
-	execute positioned 0 10 0 run {
+	{
+		# Center x
 		scoreboard players remove #x v 1
 		execute if score #x v matches 0 run {
 			# Center z
@@ -63,8 +75,8 @@ function remove_previous {
 	# Center board in play area
 	scoreboard players operation #x v = board.last.x v
 	scoreboard players operation #x v /= 2 v
-	# Center x
-	execute positioned 0 10 0 run {
+	{
+		# Center x
 		scoreboard players remove #x v 1
 		execute if score #x v matches 0 run {
 			# Center z

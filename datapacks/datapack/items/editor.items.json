@@ -1,0 +1,26 @@
+{
+	"place_obstacle_a": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place 1x1 Wall",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_b": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place 1x2 Wall",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@ blocks move_on {
 }
 
 blocks move_through {
-	
+	\#minecraft:air
 }
 
 blocks block_movement {
@@ -12,7 +12,7 @@ blocks block_movement {
 }
 
 blocks target_through {
-	
+	\#minecraft:air
 }
 
 blocks block_target {

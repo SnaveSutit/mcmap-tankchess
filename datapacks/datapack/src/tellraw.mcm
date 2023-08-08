@@ -1,0 +1,10 @@
+
+macro tellraw {
+	<%%
+		const key = args.slice(1).map(v => v.content).join(' ')
+		const parts = key.split(':')
+		const value = config.tellrawMap[parts[0]]?.[parts[1]]
+		if (!value) return emit('tellraw ' + args.map(v => v.content).join(' '))
+		emit(`tellraw ${args[0].content} ${JSON.stringify(value)}`)
+	%%>
+}

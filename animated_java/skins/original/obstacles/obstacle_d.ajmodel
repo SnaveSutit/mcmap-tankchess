@@ -1,0 +1,273 @@
+{
+	"meta": {
+		"format": "animated_java/ajmodel",
+		"format_version": "0.5.0",
+		"uuid": "39c342f4-3138-5efe-2284-c04edea79227"
+	},
+	"animated_java": {
+		"settings": {
+			"project_namespace": "original_obstacle_d",
+			"project_resolution": [
+				128,
+				128
+			],
+			"target_minecraft_version": "1.20",
+			"rig_item": "minecraft:black_dye",
+			"rig_item_model": "",
+			"rig_export_folder": "",
+			"texture_export_folder": "",
+			"enable_advanced_resource_pack_settings": false,
+			"resource_pack_mcmeta": "D:\\github-repos\\mcmap-tankchess\\resources\\pack.mcmeta",
+			"verbose": true,
+			"exporter": "animated_java:datapack_exporter"
+		},
+		"exporter_settings": {
+			"animated_java:datapack_exporter": {
+				"datapack_mcmeta": "D:\\github-repos\\mcmap-tankchess\\datapacks\\animated_java\\pack.mcmeta",
+				"outdated_rig_warning": false,
+				"root_entity_nbt": "{}",
+				"include_variant_summon_functions": false,
+				"include_apply_variant_functions": false,
+				"include_uninstall_function": false,
+				"include_pause_all_animations_function": false,
+				"include_remove_rigs_function": false,
+				"include_remove_all_function": true,
+				"include_on_load_function_tags": false,
+				"include_on_tick_function_tags": false,
+				"include_on_summon_function_tags": true,
+				"include_on_remove_function_tags": true
+			},
+			"animated_java:json_exporter": {
+				"output_file": ""
+			}
+		},
+		"variants": [
+			{
+				"name": "default",
+				"textureMap": {},
+				"uuid": "3af9a3d4-f8b2-c67c-c380-83779599caaa",
+				"boneConfig": {},
+				"default": true,
+				"affectedBonesIsAWhitelist": false,
+				"affectedBones": []
+			}
+		]
+	},
+	"resolution": {
+		"width": 128,
+		"height": 128
+	},
+	"elements": [
+		{
+			"name": "cube",
+			"box_uv": false,
+			"rescale": false,
+			"locked": false,
+			"render_order": "default",
+			"allow_mirror_modeling": true,
+			"from": [
+				-6,
+				0,
+				-6
+			],
+			"to": [
+				6,
+				1,
+				22
+			],
+			"autouv": 0,
+			"color": 0,
+			"origin": [
+				0,
+				0,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						16,
+						112,
+						28,
+						113
+					],
+					"texture": 0
+				},
+				"east": {
+					"uv": [
+						16,
+						8,
+						44,
+						9
+					],
+					"texture": 0
+				},
+				"south": {
+					"uv": [
+						16,
+						0,
+						28,
+						1
+					],
+					"texture": 0
+				},
+				"west": {
+					"uv": [
+						16,
+						120,
+						44,
+						121
+					],
+					"texture": 0
+				},
+				"up": {
+					"uv": [
+						28,
+						44,
+						16,
+						16
+					],
+					"texture": 0
+				},
+				"down": {
+					"uv": [
+						28,
+						44,
+						16,
+						16
+					],
+					"texture": 0
+				}
+			},
+			"type": "cube",
+			"uuid": "f0e32555-fbcd-7082-add3-8ff33020fde9"
+		},
+		{
+			"name": "cube",
+			"box_uv": false,
+			"rescale": false,
+			"locked": false,
+			"render_order": "default",
+			"allow_mirror_modeling": true,
+			"from": [
+				6,
+				0,
+				-6
+			],
+			"to": [
+				22,
+				1,
+				6
+			],
+			"autouv": 0,
+			"color": 0,
+			"origin": [
+				0,
+				0,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						16,
+						112,
+						32,
+						113
+					],
+					"texture": 0
+				},
+				"east": {
+					"uv": [
+						16,
+						8,
+						28,
+						9
+					],
+					"texture": 0
+				},
+				"south": {
+					"uv": [
+						16,
+						0,
+						32,
+						1
+					],
+					"texture": 0
+				},
+				"west": {
+					"uv": [
+						16,
+						120,
+						28,
+						121
+					],
+					"texture": 0
+				},
+				"up": {
+					"uv": [
+						32,
+						28,
+						16,
+						16
+					],
+					"texture": 0
+				},
+				"down": {
+					"uv": [
+						32,
+						28,
+						16,
+						16
+					],
+					"texture": 0
+				}
+			},
+			"type": "cube",
+			"uuid": "48e44651-6242-16ff-e26d-9642600c2d70"
+		}
+	],
+	"outliner": [
+		{
+			"name": "bone",
+			"origin": [
+				0,
+				0,
+				16
+			],
+			"color": 0,
+			"nbt": "{}",
+			"uuid": "3e7a86a9-c027-dddd-ce6d-85ecd3dee777",
+			"export": true,
+			"mirror_uv": false,
+			"isOpen": true,
+			"locked": false,
+			"visibility": true,
+			"autouv": 0,
+			"children": [
+				"f0e32555-fbcd-7082-add3-8ff33020fde9",
+				"48e44651-6242-16ff-e26d-9642600c2d70"
+			]
+		}
+	],
+	"textures": [
+		{
+			"path": "D:\\github-repos\\mcmap-tankchess\\resources\\assets\\tankchess\\textures\\skins\\original\\obstacles\\obstacle.png",
+			"name": "obstacle",
+			"folder": "",
+			"namespace": "",
+			"id": "0",
+			"particle": false,
+			"render_mode": "default",
+			"render_sides": "auto",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"mode": "bitmap",
+			"saved": true,
+			"uuid": "aec2ac72-539d-540d-1709-2590c4706370",
+			"relative_path": "../../../../../resources/assets/tankchess/textures/skins/original/obstacles/obstacle.png",
+			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABZBJREFUeF7tndtu2zAQRC3noU1StOn/f2uiYimOPWYoP8RIKWJPgMK2Elby8rJL7uFw+fnyZz2fz6f4eX9/Py3LUt7H68fHx0m/i/dxzX+/rusp/lF+XvstL7/+rlHxT09PlwqPz/Gjio1KVqOI1/gcDUGVT/l57bfECKBKjUagyo4eH581Kuh6OyKUllEbBeXns9/y/Pq2qkdHRbZDvSpYPd7/1kcCuQbK37rKw9vvx/Pv1f26hnr37xrifTRQg3DXsBcfUH5zEUe0X4kB1PM1lLeV6r1+r6dHz6f8Fh9NZb8YAcKvR8Uq+Iv3cU2zgHjVF5OfV4UrWKT8nPZbogF4pfamfapsNQpVutwE5bfgb2/afGT7lVlAGwMokFMAoy+mtYF2rYDy17UTD6RnsF8ZAbxn+/zefbr+xmcDrZvwALJdQ6D85lKPZr8yDfS5vHqzFnk0tPWu6xrlr2shs9mvjADtEq96voZ+BYDeKPZmA24Aym9L6Ue2300D2Fvy7a0NyNdpithbF2inj23uQLMLNUDu319y/077FxfgQV/by70Xq4L0QO0ooJFDrd4TSqp8Xxmj/BY8jrT/pwbQywJqnSAeNtYK9FkP7l+A8p+zqIe2n4JA9VANxz6ke/Ta82nq+e4OKL9lS72H++jqo+VI+5V1APL58+bzH+Ux4AHO5+LWsvIQ8AA1Ko2elJFngAeoZFNangEeYOMfeyncFnk7Yj6/fe7emsE9HgMeoFZ+Wp4BHmCDX7PyDPAAFvzNmM/34PUrzw8PUFO07ksz8RDwAHXzi2KAbDwEPICyU7bhpU1q3UvWWPHLhpmZysMDdLa8ZeIh4AHqNresPAM8wOB8PDxA3YXcksaOpx86nz7788MDbKngrDwEPEByfQN4AHgA9AHkAuAB0AfIp48ADwAPgD5AHfnkCnpwyN4GWCeJpiwPDwAPgD5AFcf6Sj790Xz86PLwAPAA6ANk1keAB4AHQB8gsz4CPAA8APoAI/fnwwPMnk+f/fnhAeAB0AdIfF4CPAA8ADwAPECdCnlE2opAusKlawHqetr99bPrC8ADwAPAA8AD5N0fH24PfYDE+fDR+fjR94cHgAeAB4AHMK282fTuZ9+fP/r50QdAH+AKhKDX///1+keft4A+APoAt0AIev+T6f0/yiPAA8ADwAPAA+TVy481AM4LqBIpGffHax7OeQGmmu2cvAwED7CdAeRH4em9XxNhPA1PAQ8ADwAPAA8AD8B5Aeta9HFcoFGxgJS0PWum8wNH57O5//Wwq6/UHzwAPAA8ADwAPMBFLjYbDwEPAA8AD6BgNyMPAQ8ADwAP4AIR6XgIeAB4AHgAeAB4gEiFayUt+ABtGevp/3oWcHaeoKwEZt4fDw/w+rZOnc+efX/+6OeHB4AHgAeAB4AHgAeAB0jJQ8ADwAPAA8ADwAPAA7SnYsXagFbGlCaNV7GAe7qADlRQfmMsj2w/zgvgvADOC+C8gCYSbvFi6eiFo4xEiT7LcKnz6Y/uzx9dHh4AHgAeAB4AHgAeYL1uMZJsfBglfL62hjsk4X4fnuBUpnoz6isUKhgeYC2NPOV5CfAA8ADwAPAA8ADwAPAA8ABtICRiViuD2jXjiaN2FbA9ClWf29XDuN77/yh/Kg3RRaa+0/4lGZQ5Hy7jSgVFU14ppSiTJxu5WpquzWy/Mg10Nj7b/vjRev2j748+APoA6AOgD2BBR0v9ONUjf6gArhc0Uv6Wmjq6/T4JRKTbHz86Hz/6/vAA8ADwAPAA8ADwAJPms7Pv73/0+8MDjN6fP/r+8ADwAPAA8ADwAPAA8ADwAPAAt2BoBh4CHqCekgIPUM8OhAfYRgFPat3bPDo6n//o/eEB4AHgAeAB4AEuEGY2ngEeYHQ+fvT94QFy8wD/AHQgBQSVkcwbAAAAAElFTkSuQmCC"
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"item": {
+			"type": "object",
+			"required": ["id", "nbt"],
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"nbt": {
+					"type": "object",
+					"properties": {
+						"display": {
+							"type": "object",
+							"properties": {
+								"Name": {
+									"$ref": "./jsonText.schema.json#/definitions/JsonTextComponent"
+								},
+								"Lore": {
+									"type": "array",
+									"items": {
+										"$ref": "./jsonText.schema.json#/definitions/JsonTextComponent"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,139 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "minecraft:item/black_dye"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 1
+			},
+			"model": "item/animated_java_empty"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 2
+			},
+			"model": "animated_java:item/original_obstacle_a/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 3
+			},
+			"model": "animated_java:item/original_obstacle_b/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 4
+			},
+			"model": "animated_java:item/original_obstacle_c/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 5
+			},
+			"model": "animated_java:item/original_obstacle_d/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 6
+			},
+			"model": "animated_java:item/original_obstacle_d_mirror/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 7
+			},
+			"model": "animated_java:item/original_obstacle_e/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 8
+			},
+			"model": "animated_java:item/original_obstacle_e_mirror/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 9
+			},
+			"model": "animated_java:item/original_obstacle_f/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 10
+			},
+			"model": "animated_java:item/original_obstacle_g/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 11
+			},
+			"model": "animated_java:item/original_obstacle_g_mirror/bone"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 12
+			},
+			"model": "animated_java:item/original_obstacle_f_mirror/bone"
+		}
+	],
+	"animated_java": {
+		"rigs": {
+			"original_obstacle_a": {
+				"used_ids": [
+					2
+				]
+			},
+			"original_obstacle_b": {
+				"used_ids": [
+					3
+				]
+			},
+			"original_obstacle_c": {
+				"used_ids": [
+					4
+				]
+			},
+			"original_obstacle_d": {
+				"used_ids": [
+					5
+				]
+			},
+			"original_obstacle_d_mirror": {
+				"used_ids": [
+					6
+				]
+			},
+			"original_obstacle_e": {
+				"used_ids": [
+					7
+				]
+			},
+			"original_obstacle_e_mirror": {
+				"used_ids": [
+					8
+				]
+			},
+			"original_obstacle_f": {
+				"used_ids": [
+					9
+				]
+			},
+			"original_obstacle_g": {
+				"used_ids": [
+					10
+				]
+			},
+			"original_obstacle_g_mirror": {
+				"used_ids": [
+					11
+				]
+			},
+			"original_obstacle_f_mirror": {
+				"used_ids": [
+					12
+				]
+			}
+		}
+	}
+}
