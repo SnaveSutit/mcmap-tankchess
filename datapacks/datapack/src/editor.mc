@@ -19,60 +19,86 @@ function stop_editing {
 	tellraw @a editor:deactivate
 }
 
+function clear_loaded_map {
+	data modify storage func:input args set value {skin: 'original', ghost: 'false'}
+	data modify storage func:input args.skin set from storage settings:ram skin
+	execute as @e[tag=obstacle,x=990,y=11,z=-10, dx=21,dy=10,dz=21] at @s run function obstacles:remove_obstacle with storage func:input args
+}
+
 function tick {
 	execute if score .editor_active v matches 0 run return 0
 
-	execute as @a[tag=editor] run {
-		execute if predicate editor:holding/place_obstacle_a run {
-			execute if score @s click matches 1.. at @s anchored eyes positioned ^ ^ ^ run {
-				say Clicked A!
-				# function raycast:cast {max_steps: 100, step_size: '0.1', function: 'editor:test'}
+	execute as @a[tag=editor] at @s anchored eyes positioned ^ ^ ^ run {
+
+		execute (if predicate game:holding/custom_item) {
+			scoreboard players set #distance v 500
+			{
+				execute unless block ~ ~ ~ #minecraft:air run {
+					scoreboard players set #distance v 0
+					execute unless entity 0-0-0-0-0 run {
+						# say summon
+						execute align xyz positioned ~.5 ~1 ~.5 run summon marker ~ ~ ~ {Tags:['raycast_marker'],UUID:[I;0,0,0,0]}
+					}
+					execute if entity 0-0-0-0-0 run {
+						execute align xyz positioned ~.5 ~1 ~.5 run tp 0-0-0-0-0 ~ ~ ~ ~ ~
+					}
+				}
+				scoreboard players remove #distance v 1
+				execute positioned ^ ^ ^0.1 if score #distance v matches 1.. run function $block
+			}
+		} else execute (if entity 0-0-0-0-0) {
+			# say kill
+			kill 0-0-0-0-0
+		}
+
+		LOOP(config.obstacles,i) {
+			execute (if predicate editor:holding/place_obstacle_<%i%>) {
+				kill @e[tag=ghost,tag=!ghost_<%i%>]
+				execute as 0-0-0-0-0 at @s rotated ~ 0 run {
+					execute (unless entity @e[type=item_display,tag=ghost_<%i%>] positioned ~ -10 ~) {
+						function obstacles:summon_obstacle_<%i%> with storage settings:ram
+						execute as @e[type=item_display,distance=..0.01,limit=1] run {
+							tag @s add ghost_<%i%>
+							tag @s add ghost
+							function util:align_rotation_cardinal
+							function util:set_teleportation_duration {value:'1'}
+						}
+					} else execute (as @e[type=item_display,tag=ghost_<%i%>]) {
+						tp @s ~ ~.25 ~ ~ ~
+						execute at @s run function util:align_rotation_cardinal
+					}
+				}
+				execute if score @s click matches 1.. run {
+					say Place Obstacle <%i%>
+					execute at @e[type=item_display,tag=ghost_<%i%>,limit=1] rotated ~ 0 positioned ~ ~-0.25 ~ run function obstacles:summon_obstacle_<%i%> with storage settings:ram
+				}
+			} else execute (as @e[type=item_display,tag=ghost_<%i%>]) {
+				function util:kill_stack
 			}
 		}
-		# execute if predicate editor:holding/place_obstacle_b run {
-		# 	execute if score @s click matches 1.. at @s anchored eyes positioned ^ ^ ^ run {
-		# 		say Clicked B!
-		# 	}
-		# }
 	}
 	scoreboard players set @a click 0
 }
 
-function test {
-	say hi
-	particle end_rod ^ ^ ^-0.1 0 0 0 0 1 force
-}
-
 function give_editor_tools {
-	item replace entity @s hotbar.0 with editor:place_obstacle_a 1
-	item replace entity @s hotbar.1 with editor:place_obstacle_b 1
+	LOOP(config.obstacles, i) {
+		item replace entity @s container.<%config.obstacles.indexOf(i)%> with editor:place_obstacle_<%i%> 1
+	}
 }
 
 dir holding {
-	predicate place_obstacle_a {
-		"condition": "minecraft:entity_properties",
-		"entity": "this",
-		"predicate": {
-			"equipment": {
-				"mainhand": {
-					"items": [
-						"minecraft:carrot_on_a_stick"
-					],
-					"nbt": "{customItemId:'editor:place_obstacle_a'}"
-				}
-			}
-		}
-	}
-	predicate place_obstacle_b {
-		"condition": "minecraft:entity_properties",
-		"entity": "this",
-		"predicate": {
-			"equipment": {
-				"mainhand": {
-					"items": [
-						"minecraft:carrot_on_a_stick"
-					],
-					"nbt": "{customItemId:'editor:place_obstacle_b'}"
+	LOOP(config.obstacles, i) {
+		predicate place_obstacle_<%i%> {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"mainhand": {
+						"items": [
+							"minecraft:carrot_on_a_stick"
+						],
+						"nbt": "{customItemId:'editor:place_obstacle_<%i%>'}"
+					}
 				}
 			}
 		}

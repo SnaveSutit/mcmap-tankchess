@@ -6,7 +6,7 @@
 	},
 	"animated_java": {
 		"settings": {
-			"project_namespace": "lv",
+			"project_namespace": "original_lv",
 			"project_resolution": [32, 32],
 			"target_minecraft_version": "1.20",
 			"rig_item": "minecraft:leather_horse_armor",
@@ -646,7 +646,7 @@
 			"uuid": "35f27057-0e70-ba9d-5c42-82e66576ec5f",
 			"export": true,
 			"mirror_uv": false,
-			"isOpen": false,
+			"isOpen": true,
 			"locked": false,
 			"visibility": true,
 			"autouv": 0,
@@ -716,6 +716,7 @@
 			"mode": "bitmap",
 			"saved": true,
 			"uuid": "ee839701-5807-0303-f75b-0e0f2e68fbf1",
+			"relative_path": "../../../../../resources/assets/tankchess/textures/skins/original/vehicles/lv/default.png",
 			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAC9JREFUWEft0EERAAAMwrDhXzSTwSdV0Eva9obFAAECBAgQIECAAAECBAgQILAWeDFMf6H5tiP5AAAAAElFTkSuQmCC"
 		}
 	]

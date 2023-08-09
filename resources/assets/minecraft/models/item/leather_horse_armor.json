@@ -1,0 +1,36 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "minecraft:item/leather_horse_armor"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 1
+			},
+			"model": "item/animated_java_empty"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 2
+			},
+			"model": "animated_java:item/original_lv/tread"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 3
+			},
+			"model": "animated_java:item/original_lv/turret"
+		}
+	],
+	"animated_java": {
+		"rigs": {
+			"original_lv": {
+				"used_ids": [
+					2,
+					3
+				]
+			}
+		}
+	}
+}

@@ -25,5 +25,7 @@ function init {
 	scoreboard players add board.last.z v 0
 
 	#> Constants
+	scoreboard players set true v 1
+	scoreboard players set false v 0
 	const 2
 }

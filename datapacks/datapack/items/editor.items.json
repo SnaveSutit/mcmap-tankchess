@@ -4,7 +4,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place 1x1 Wall",
+					"text": "Place Wall A",
 					"italic": false,
 					"color": "gray"
 				}
@@ -16,7 +16,115 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place 1x2 Wall",
+					"text": "Place Wall B",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_c": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall C",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_d": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall D",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_d_mirror": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall D (Mirrored)",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_e": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall E",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_e_mirror": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall E (Mirrored)",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_f": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall F",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_f_mirror": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall F (Mirrored)",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_g": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall G",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_obstacle_g_mirror": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Wall G (Mirrored)",
 					"italic": false,
 					"color": "gray"
 				}

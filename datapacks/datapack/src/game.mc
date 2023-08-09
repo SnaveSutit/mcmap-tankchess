@@ -11,3 +11,17 @@
 function reset {
 	
 }
+
+dir holding {
+	predicate custom_item {
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"mainhand": {
+					"nbt": "{isCustomItem:true}"
+				}
+			}
+		}
+	}
+}

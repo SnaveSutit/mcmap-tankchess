@@ -9,6 +9,7 @@ macro give {
 		value = JSON.parse(JSON.stringify(value))
 		if (!value.nbt) value.nbt = {}
 		value.nbt.customItemId = key
+		value.nbt.isCustomItem = true
 		if (value.nbt?.display?.Name) value.nbt.display.Name = JSON.stringify(value.nbt.display.Name)
 		if (value.nbt?.display?.Lore) value.nbt.display.Lore = value.nbt.display.Lore.map(v => JSON.stringify(v))
 
@@ -26,6 +27,7 @@ macro item {
 		value = JSON.parse(JSON.stringify(value))
 		if (!value.nbt) value.nbt = {}
 		value.nbt.customItemId = key
+		value.nbt.isCustomItem = true
 		if (value.nbt?.display?.Name) value.nbt.display.Name = JSON.stringify(value.nbt.display.Name)
 		if (value.nbt?.display?.Lore) value.nbt.display.Lore = value.nbt.display.Lore.map(v => JSON.stringify(v))
 

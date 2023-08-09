@@ -8,6 +8,6 @@ function cast {
 function recurse {
 	particle end_rod ~ ~ ~
 	scoreboard players remove #max_steps v 1
-	$execute unless block ~ ~ ~ #minecraft:air run function $(function)
+	$execute unless block ~ ~ ~ #minecraft:air run return run function $(function)
 	$execute if score #max_steps v matches 1.. positioned ^ ^ ^$(step_size) run function raycast:recurse with storage ray:cast data
 }
