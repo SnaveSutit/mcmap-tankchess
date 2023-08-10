@@ -19,6 +19,8 @@ function build_editor {
 	execute positioned 1000 10 0 run {
 		function board:build_local
 	}
+	# fill 990 5 -10 1011 5 11 piston[facing=up]
+	# fill 991 5 -9 1009 5 9 air
 }
 
 function build_local {
@@ -55,13 +57,17 @@ function place_checkerboard {
 			scoreboard players operation #a v += #z v
 			scoreboard players operation #a v %= 2 v
 			execute if score #a v matches 0 run {
-				# particle block_marker granite ~ ~ ~
-				function blocks:origin_board_a/setblock
+				setblock ~ ~ ~ white_glazed_terracotta
 			}
 			execute if score #a v matches 1 run {
-				# particle block_marker diorite ~ ~ ~
-				function blocks:origin_board_b/setblock
+				setblock ~ ~ ~ orange_glazed_terracotta
 			}
+
+			execute if score #x v = board.x v run setblock ~-1 5 ~ piston[facing=up]
+			execute if score #x v matches 1 run setblock ~1 5 ~ piston[facing=up]
+
+			execute if score #z v = board.z v run setblock ~ 5 ~-1 piston[facing=up]
+			execute if score #z v matches 1 run setblock ~ 5 ~1 piston[facing=up]
 
 			scoreboard players remove #x v 1
 			execute if score #x v matches 1.. positioned ~1 ~ ~ run function $block
@@ -72,6 +78,7 @@ function place_checkerboard {
 }
 
 function remove_previous {
+	fill 990 5 -10 1011 5 11 air
 	# Center board in play area
 	scoreboard players operation #x v = board.last.x v
 	scoreboard players operation #x v /= 2 v

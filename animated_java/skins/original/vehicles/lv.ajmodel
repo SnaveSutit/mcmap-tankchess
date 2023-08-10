@@ -22,7 +22,7 @@
 			"animated_java:datapack_exporter": {
 				"datapack_mcmeta": "D:\\github-repos\\mcmap-tankchess\\datapacks\\animated_java\\pack.mcmeta",
 				"outdated_rig_warning": false,
-				"root_entity_nbt": "{}",
+				"root_entity_nbt": "{Tags:['vehicle']}",
 				"include_variant_summon_functions": true,
 				"include_apply_variant_functions": true,
 				"include_uninstall_function": false,

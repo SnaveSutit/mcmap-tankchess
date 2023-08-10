@@ -4,23 +4,23 @@ function load {
 }
 
 LOOP(config.tc.Vehicle.all, v) {
-	function on_summon_<%v.name%> {
-		execute store result score @s V.id run scoreboard players add #last_id v 1
-
-		tag @s add lv
-		tag @s add vehicle
-
-		scoreboard players set @s V.type <%v.id%>
-		scoreboard players set @s V.speed <%v.speed%>
-		scoreboard players set @s V.move.type <%v.movementType.id%>
-		scoreboard players set @s V.gun.type <%v.gunType.id%>
-		scoreboard players set @s V.gun.power <%v.gunPower%>
-		scoreboard players set @s V.armor.front <%v.armor.front%>
-		scoreboard players set @s V.armor.side <%v.armor.side%>
-		scoreboard players set @s V.armor.back <%v.armor.back%>
-	}
 	function summon_<%v.name%> {
-		execute align xyz positioned ~.5 ~ ~.5 run function animated_java:lv/summon
+		$execute align xyz positioned ~.5 ~ ~.5 run function animated_java:$(skin)_lv/summon
+		execute align xyz positioned ~.5 ~ ~.5 as @e[type=item_display,distance=..0.01,limit=1] run {
+			execute store result score @s V.id run scoreboard players add #last_id v 1
+
+			tag @s add <%v.name%>
+			tag @s add vehicle
+
+			scoreboard players set @s V.type <%v.id%>
+			scoreboard players set @s V.speed <%v.speed%>
+			scoreboard players set @s V.move.type <%v.movementType.id%>
+			scoreboard players set @s V.gun.type <%v.gunType.id%>
+			scoreboard players set @s V.gun.power <%v.gunPower%>
+			scoreboard players set @s V.armor.front <%v.armor.front%>
+			scoreboard players set @s V.armor.side <%v.armor.side%>
+			scoreboard players set @s V.armor.back <%v.armor.back%>
+		}
 		# (
 		# 	execute align xyz positioned ~.5 ~ ~.5 run
 		# 	summon area_effect_cloud ~ ~ ~ {

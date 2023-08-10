@@ -78,19 +78,7 @@ module.exports = () => ({
 			return require('./tankchess.js')
 		},
 
-		obstacles: [
-			'a',
-			'b',
-			'c',
-			'd',
-			'd_mirror',
-			'e',
-			'e_mirror',
-			'f',
-			'f_mirror',
-			'g',
-			'g_mirror',
-		],
+		obstacles: ['a', 'b', 'c', 'd', 'e', 'e_mirror', 'f', 'f_mirror', 'g', 'g_mirror'],
 
 		generateMoveTree(vehicle) {
 			const flatTree = []

@@ -22,7 +22,7 @@ macro item {
 		const key = args[5].content
 		const parts = key.split(':')
 		let value = config.itemMap[parts[0]]?.[parts[1]]
-		if (!value) return emit('give ' + args.map(v => v.content).join(' '))
+		if (!value) return emit('item ' + args.map(v => v.content).join(' '))
 
 		value = JSON.parse(JSON.stringify(value))
 		if (!value.nbt) value.nbt = {}

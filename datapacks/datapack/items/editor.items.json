@@ -4,7 +4,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall A",
+					"text": "Place Wall Piece A",
 					"italic": false,
 					"color": "gray"
 				}
@@ -16,7 +16,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall B",
+					"text": "Place Wall Piece B",
 					"italic": false,
 					"color": "gray"
 				}
@@ -28,7 +28,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall C",
+					"text": "Place Wall Piece C",
 					"italic": false,
 					"color": "gray"
 				}
@@ -40,19 +40,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall D",
-					"italic": false,
-					"color": "gray"
-				}
-			}
-		}
-	},
-	"place_obstacle_d_mirror": {
-		"id": "minecraft:carrot_on_a_stick",
-		"nbt": {
-			"display": {
-				"Name": {
-					"text": "Place Wall D (Mirrored)",
+					"text": "Place Wall Piece D",
 					"italic": false,
 					"color": "gray"
 				}
@@ -64,7 +52,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall E",
+					"text": "Place Wall Piece E",
 					"italic": false,
 					"color": "gray"
 				}
@@ -76,7 +64,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall E (Mirrored)",
+					"text": "Place Wall Piece E (Mirrored)",
 					"italic": false,
 					"color": "gray"
 				}
@@ -88,7 +76,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall F",
+					"text": "Place Wall Piece F",
 					"italic": false,
 					"color": "gray"
 				}
@@ -100,7 +88,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall F (Mirrored)",
+					"text": "Place Wall Piece F (Mirrored)",
 					"italic": false,
 					"color": "gray"
 				}
@@ -112,7 +100,7 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall G",
+					"text": "Place Wall Piece G",
 					"italic": false,
 					"color": "gray"
 				}
@@ -124,7 +112,31 @@
 		"nbt": {
 			"display": {
 				"Name": {
-					"text": "Place Wall G (Mirrored)",
+					"text": "Place Wall Piece G (Mirrored)",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"remove_piece": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Remove Piece",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_vehicle_lv": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"display": {
+				"Name": {
+					"text": "Place Light Vehicle",
 					"italic": false,
 					"color": "gray"
 				}

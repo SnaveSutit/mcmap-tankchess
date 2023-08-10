@@ -111,7 +111,7 @@
 					"type": "string"
 				},
 				"hoverEvent": {
-					"$ref": "#/definitions/{action:\"show_text\"|\"show_item\"|\"show_entity\";contents:JsonTextComponent|{type:string;id:string;name?:string;}|{id:string;count?:number;tag?:string;};}"
+					"$ref": "#/definitions/hoverEvent"
 				},
 				"insertion": {
 					"type": "string"
@@ -169,7 +169,7 @@
 			},
 			"type": "object"
 		},
-		"{action:\"show_text\"|\"show_item\"|\"show_entity\";contents:JsonTextComponent|{type:string;id:string;name?:string;}|{id:string;count?:number;tag?:string;};}": {
+		"hoverEvent": {
 			"properties": {
 				"action": {
 					"enum": ["show_entity", "show_item", "show_text"],
