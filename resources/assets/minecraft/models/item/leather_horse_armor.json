@@ -21,6 +21,18 @@
 				"custom_model_data": 3
 			},
 			"model": "animated_java:item/original_lv/turret"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 4
+			},
+			"model": "animated_java:item/original_mv/turret"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 5
+			},
+			"model": "animated_java:item/original_mv/tread"
 		}
 	],
 	"animated_java": {
@@ -29,6 +41,12 @@
 				"used_ids": [
 					2,
 					3
+				]
+			},
+			"original_mv": {
+				"used_ids": [
+					4,
+					5
 				]
 			}
 		}

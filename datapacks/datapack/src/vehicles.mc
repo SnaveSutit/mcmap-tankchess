@@ -5,53 +5,23 @@ function load {
 
 LOOP(config.tc.Vehicle.all, v) {
 	function summon_<%v.name%> {
-		$execute align xyz positioned ~.5 ~ ~.5 run function animated_java:$(skin)_lv/summon
-		execute align xyz positioned ~.5 ~ ~.5 as @e[type=item_display,distance=..0.01,limit=1] run {
-			execute store result score @s V.id run scoreboard players add #last_id v 1
+		$execute align xyz positioned ~.5 ~ ~.5 run function animated_java:$(skin)_<%v.name%>/summon
+		$execute align xyz positioned ~.5 ~ ~.5 as @e[type=item_display,tag=aj.$(skin)_<%v.name%>.root,distance=..0.01,limit=1] run function vehicles:$(skin)_<%v.name%>/setup_<%v.name%>
+	}
+	function setup_<%v.name%> {
+		execute store result score @s V.id run scoreboard players add #last_id v 1
 
-			tag @s add <%v.name%>
-			tag @s add vehicle
+		tag @s add <%v.name%>
+		tag @s add vehicle
 
-			scoreboard players set @s V.type <%v.id%>
-			scoreboard players set @s V.speed <%v.speed%>
-			scoreboard players set @s V.move.type <%v.movementType.id%>
-			scoreboard players set @s V.gun.type <%v.gunType.id%>
-			scoreboard players set @s V.gun.power <%v.gunPower%>
-			scoreboard players set @s V.armor.front <%v.armor.front%>
-			scoreboard players set @s V.armor.side <%v.armor.side%>
-			scoreboard players set @s V.armor.back <%v.armor.back%>
-		}
-		# (
-		# 	execute align xyz positioned ~.5 ~ ~.5 run
-		# 	summon area_effect_cloud ~ ~ ~ {
-		# 		Tags:[
-		# 			'vehicle',
-		# 			'<%v.name%>',
-		# 			'gun.<%v.gunType.name%>',
-		# 			'alive',
-		# 			'new'
-		# 		],
-		# 		CustomNameVisible:1b,
-		# 		CustomName:'""',
-		# 		Age:-2147483648,
-		# 		Duration:-1,
-		# 		WaitTime:-2147483648,
-		# 		Passengers:[{
-		# 			Tags:[
-		# 				'vehicle.display',
-		# 				'<%v.name%>.display',
-		# 				'new'
-		# 			],
-		# 			id:"minecraft:armor_stand",
-		# 			ArmorItems:[{},{},{},{
-		# 				id:"minecraft:leather_horse_armor",Count:1b,tag:{CustomModelData:0}
-		# 			}],
-		# 			NoGravity:1b,
-		# 			Marker:1b,
-		# 			Invisible:1b
-		# 		}]
-		# 	}
-		# )
+		scoreboard players set @s V.type <%v.id%>
+		scoreboard players set @s V.speed <%v.speed%>
+		scoreboard players set @s V.move.type <%v.movementType.id%>
+		scoreboard players set @s V.gun.type <%v.gunType.id%>
+		scoreboard players set @s V.gun.power <%v.gunPower%>
+		scoreboard players set @s V.armor.front <%v.armor.front%>
+		scoreboard players set @s V.armor.side <%v.armor.side%>
+		scoreboard players set @s V.armor.back <%v.armor.back%>
 	}
 }
 
@@ -84,10 +54,6 @@ function remove_closest {
 		kill @e[type=armor_stand,tag=vehicle.display,distance=..0.6,sort=nearest,limit=1]
 		kill @s
 	}
-}
-
-function set_name {
-
 }
 
 # TODO Add player color to nametag

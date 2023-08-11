@@ -85,6 +85,14 @@
                 "assets\\animated_java\\models\\item\\original_lv\\turret.json",
                 "assets\\minecraft\\models\\item\\animated_java_empty.json"
             ]
+        },
+        "47a2a7e7-0e24-3ee2-bc7d-41d828638d21": {
+            "project_name": "original_mv",
+            "file_list": [
+                "assets\\animated_java\\models\\item\\original_mv\\turret.json",
+                "assets\\animated_java\\models\\item\\original_mv\\tread.json",
+                "assets\\minecraft\\models\\item\\animated_java_empty.json"
+            ]
         }
     }
 }

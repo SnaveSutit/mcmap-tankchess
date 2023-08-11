@@ -134,9 +134,23 @@
 	"place_vehicle_lv": {
 		"id": "minecraft:carrot_on_a_stick",
 		"nbt": {
+			"command": "function vehicles:summon_lv with storage settings:ram",
 			"display": {
 				"Name": {
 					"text": "Place Light Vehicle",
+					"italic": false,
+					"color": "gray"
+				}
+			}
+		}
+	},
+	"place_vehicle_mv": {
+		"id": "minecraft:carrot_on_a_stick",
+		"nbt": {
+			"command": "function vehicles:summon_mv with storage settings:ram",
+			"display": {
+				"Name": {
+					"text": "Place Medium Vehicle",
 					"italic": false,
 					"color": "gray"
 				}

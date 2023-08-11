@@ -26,9 +26,25 @@ function set_teleportation_duration {
 	$data modify entity @s teleport_duration set value $(value)
 }
 
+function glow_stack {
+	$execute on passengers run data merge entity @s {Glowing: 1b, glow_color_override: $(color)}
+	$data merge entity @s {Glowing: 1b, glow_color_override: $(color)}
+}
+
+function unglow_stack {
+	execute on passengers run data modify entity @s Glowing set value 0b
+	data modify entity @s Glowing set value 0b
+}
+
 function kill_stack {
 	execute on passengers run kill @s
 	kill @s
+}
+
+function check_nbt_equality {
+	scoreboard players set #return v 0
+	execute store result score #result v run data modify storage util:nbt b set from storage util:nbt a
+	execute if score #result v matches 0 run scoreboard players set #return v 1
 }
 
 function place_structure_by_entity_rotation {

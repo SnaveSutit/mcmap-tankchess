@@ -38,15 +38,14 @@ class Vehicle {
 		lastVehicleId++
 		this.id = lastVehicleId
 		this.name = options.name
-		this.customModelData = options.customModelData
 
-		i = MovementType.all.find((v) => v.name === options.movementType)
+		i = MovementType.all.find(v => v.name === options.movementType)
 		if (!i) throw new Error(`Unknown movementType '${i}'`)
 		this.movementType = i
 
 		this.speed = options.speed
 
-		i = GunType.all.find((v) => v.name === options.gunType)
+		i = GunType.all.find(v => v.name === options.gunType)
 		if (!i) throw new Error(`Unknown gunType '${i}'`)
 		this.gunType = i
 
@@ -54,18 +53,6 @@ class Vehicle {
 		this.armor = options.armor
 
 		Vehicle.all.push(this)
-	}
-}
-
-let lastSkinId = -1
-class Skin {
-	static all = []
-	constructor(name) {
-		lastSkinId++
-		this.id = lastSkinId
-		this.name = name
-		this.customModelDataOffset = lastSkinId + Vehicle.all.length - 1
-		Skin.all.push(this)
 	}
 }
 
@@ -77,7 +64,6 @@ new MovementType('basic')
 
 new Vehicle({
 	name: 'lv',
-	customModelData: 1,
 	movementType: 'basic',
 	speed: 5,
 	gunType: 'turret',
@@ -85,7 +71,13 @@ new Vehicle({
 	armor: new Armor(1, 0, 0),
 })
 
-new Skin('origin')
-new Skin('spaceships')
+new Vehicle({
+	name: 'mv',
+	movementType: 'basic',
+	speed: 4,
+	gunType: 'turret',
+	gunPower: 2,
+	armor: new Armor(2, 1, 0),
+})
 
-module.exports = { GunType, MovementType, Vehicle, Skin }
+module.exports = { GunType, MovementType, Vehicle }
