@@ -1,4 +1,4 @@
-import ./const.mcm
+import ./const.mcbm
 
 function apply_size_changes {
 	# Save the last size

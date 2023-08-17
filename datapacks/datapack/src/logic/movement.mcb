@@ -1,4 +1,4 @@
-import ../dev.mcm
+import ../dev.mcbm
 
 function scan_as_vehicle {
 	dev scoreboard players set .movecount i 0

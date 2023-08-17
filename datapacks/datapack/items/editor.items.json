@@ -8,7 +8,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_a"
 		}
 	},
 	"place_obstacle_b": {
@@ -20,7 +21,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_b"
 		}
 	},
 	"place_obstacle_c": {
@@ -32,7 +34,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_c"
 		}
 	},
 	"place_obstacle_d": {
@@ -44,7 +47,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_d"
 		}
 	},
 	"place_obstacle_e": {
@@ -56,7 +60,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_e"
 		}
 	},
 	"place_obstacle_e_mirror": {
@@ -68,7 +73,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_e_mirror"
 		}
 	},
 	"place_obstacle_f": {
@@ -80,7 +86,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_f"
 		}
 	},
 	"place_obstacle_f_mirror": {
@@ -92,7 +99,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_f_mirror"
 		}
 	},
 	"place_obstacle_g": {
@@ -104,7 +112,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_g"
 		}
 	},
 	"place_obstacle_g_mirror": {
@@ -116,7 +125,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "obstacle_g_mirror"
 		}
 	},
 	"remove_piece": {
@@ -141,7 +151,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "vehicle_lv"
 		}
 	},
 	"place_vehicle_mv": {
@@ -154,7 +165,8 @@
 					"italic": false,
 					"color": "gray"
 				}
-			}
+			},
+			"piece": "vehicle_mv"
 		}
 	}
 }

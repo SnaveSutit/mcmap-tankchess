@@ -1,4 +1,4 @@
-import ./const.mcm
+import ./const.mcbm
 
 function init {
 	scoreboard objectives add i dummy

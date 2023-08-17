@@ -33,6 +33,30 @@
 				"custom_model_data": 5
 			},
 			"model": "animated_java:item/original_mv/tread"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 6
+			},
+			"model": "animated_java:item/original_vehicle_mv/turret"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 7
+			},
+			"model": "animated_java:item/original_vehicle_mv/tread"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 8
+			},
+			"model": "animated_java:item/original_vehicle_lv/tread"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 9
+			},
+			"model": "animated_java:item/original_vehicle_lv/turret"
 		}
 	],
 	"animated_java": {
@@ -47,6 +71,18 @@
 				"used_ids": [
 					4,
 					5
+				]
+			},
+			"original_vehicle_mv": {
+				"used_ids": [
+					6,
+					7
+				]
+			},
+			"original_vehicle_lv": {
+				"used_ids": [
+					8,
+					9
 				]
 			}
 		}

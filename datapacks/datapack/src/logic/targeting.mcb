@@ -1,4 +1,4 @@
-import ../dev.mcm
+import ../dev.mcbm
 
 # Requires this context
 function scan_as_vehicle {

@@ -1,5 +1,5 @@
-import ./tellraw.mcm
-import ./items.mcm
+import ./tellraw.mcbm
+import ./items.mcbm
 
 function load {
 	scoreboard players add .editor_active v 0
@@ -34,9 +34,12 @@ function tick {
 		data modify storage util:nbt a set from entity @s SelectedItem.tag.customItemId
 		function util:check_nbt_equality
 		execute if score #return v matches 0 run {
-			title @a actionbar ["Switched item to ", {"storage": "util:nbt", "nbt": "a"}]
+			title @a actionbar [ \
+				"Switched item to ", \
+				{"storage": "util:nbt", "nbt": "a"} \
+			]
 			function editor:kill_ghost
-			data modify storage func:input 
+			# data modify storage func:input 
 		}
 		# Store old item
 		data modify storage util:nbt b set from storage util:nbt a

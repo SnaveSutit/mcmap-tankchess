@@ -54,6 +54,7 @@ class LocalCoordinate {
 
 module.exports = () => ({
 	global: {
+		preBuild: build => {},
 		postBuild: build => {
 			if (build.success) setTimeout(resources.buildResources, 25)
 		},

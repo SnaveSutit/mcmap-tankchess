@@ -6,7 +6,7 @@
 	},
 	"animated_java": {
 		"settings": {
-			"project_namespace": "original_mv",
+			"project_namespace": "original_vehicle_mv",
 			"project_resolution": [32, 32],
 			"target_minecraft_version": "1.20",
 			"rig_item": "minecraft:leather_horse_armor",
@@ -763,7 +763,7 @@
 		},
 		{
 			"path": "D:\\github-repos\\mcmap-tankchess\\resources\\assets\\tankchess\\textures\\skins\\original\\vehicles\\lv\\default_head.png",
-			"name": "default_head.png",
+			"name": "default_head",
 			"folder": "skins/original/vehicles/mv",
 			"namespace": "tankchess",
 			"id": "0",

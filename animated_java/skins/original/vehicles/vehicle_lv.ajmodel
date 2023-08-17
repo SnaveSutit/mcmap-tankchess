@@ -6,7 +6,7 @@
 	},
 	"animated_java": {
 		"settings": {
-			"project_namespace": "original_lv",
+			"project_namespace": "original_vehicle_lv",
 			"project_resolution": [32, 32],
 			"target_minecraft_version": "1.20",
 			"rig_item": "minecraft:leather_horse_armor",
