@@ -62,28 +62,16 @@
 	"animated_java": {
 		"rigs": {
 			"original_lv": {
-				"used_ids": [
-					2,
-					3
-				]
+				"used_ids": [2, 3]
 			},
 			"original_mv": {
-				"used_ids": [
-					4,
-					5
-				]
+				"used_ids": [4, 5]
 			},
 			"original_vehicle_mv": {
-				"used_ids": [
-					6,
-					7
-				]
+				"used_ids": [6, 7]
 			},
 			"original_vehicle_lv": {
-				"used_ids": [
-					8,
-					9
-				]
+				"used_ids": [8, 9]
 			}
 		}
 	}

@@ -8,5 +8,6 @@
 			"url": "./.vscode/itemsFile.schema.json",
 			"fileMatch": ["*.items.json"]
 		}
-	]
+	],
+	"workbench.iconTheme": "mc-dp-icons"
 }

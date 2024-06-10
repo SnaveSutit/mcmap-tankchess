@@ -96,8 +96,6 @@ function tick {
 
 		# Place Piece
 
-		
-
 		# LOOP(config.tc.Vehicle.all,v) {
 		# 	execute (if predicate editor:holding/place_vehicle_<%v.name%>) {
 		# 		kill @e[tag=editor.ghost,tag=!ghost_<%v.name%>]
